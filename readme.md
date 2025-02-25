@@ -1,88 +1,113 @@
-#inner working of python :
+--------------# Inner Workings of Python---------------
 
-#who created in which son
-#ide integrated development environment
-#cursor
-#python --version , py --version
-#hardware se bat krne ke lye binary language ko dekhna parega 
-#assemly kya hote , kese communicate krte he
-#main.py top-level file he
-#python ek interpreted language he yani (line by line)
-#: replacement he curly braces joke function me hote hen
-#code ko track krne kelye 'git' use hota he
-#underscore ka mtlb internallly kam ho raha he
+-------------------**Written by: Faria Mustaqim**------------------
 
-#--two types of programming language:
-implicit & explicit
-implicit (tyep casting execution hote he jo hme nzar nhi ate)
-expicit (type import krne ho ya koi bhi cheez importkrne ho)
-python implicit type language (type casting behind the scene hote he , internally hote he)
+## Introduction to Python
+Python was created by **Guido van Rossum**. It is an **interpreted language**, meaning the code is executed **line by line**.
+- The main file in a Python project is often named **`main.py`**, which acts as the entry point.
 
------------------------
-#.pyc compiled python (frozen binaries)
---pycache--
-c python main ko uthane ke binary language me onvert krrha he r oske cecntre me ek step byte code he
-|              |           /
-source change  version  compiled python
-main.cpython-311.pyc
-famouse variant of python is c python
----------------------
+---
 
-generated file is because of the import 
+## Python Environment & Tools
+### IDE (Integrated Development Environment)
+Software used to write and test Python code:
+- **PyCharm**
+- **VS Code**
 
-#type define best practice
+### Cursor
+The blinking line that shows where you are typing in the editor.
 
-#ctrl + / commit
+### Checking Python Version
+Use the following command to check the installed Python version:
+```sh
+python --version  # or
+py --version
+```
 
+---
 
---#execution of hello world
-internally working of python
-convert byte code
+## Communication with Hardware
+- Computers understand only **binary (0s and 1s).**
+- **Assembly language** is a low-level programming language that helps communicate with hardware.
 
-python vm (virtual machine)
-byte code(mostly hidden) and machine code are different things
+---
 
-properties of byte code :
+## Programming Concepts in Python
+- **Curly braces `{}`** are replaced with **colons `:`** in Python to define blocks of code.
+- **Git** is used to track code changes and manage project versions.
+- **Underscore `_`** in Python often signifies internal use.
 
-BYTE CODE: (low level & platform independent) -> ye srf python ki virtual machine understand krskta he then binary code me convert me hota he (0:false , 1:true)
+---
 
-compile the code into byte code '.py'
+## Types of Programming Languages
+### Implicit Programming (Automatic Type Casting)
+Python automatically converts one data type to another (e.g., `int` to `float`).
 
-byte code is not the machine code
+### Explicit Programming (Manual Type Declaration)
+Manual type definition or conversion is needed (e.g., `int("5")`).
 
-byte code is faster because the code is stored in cache
+Python is an **implicit type language**, meaning type conversion happens automatically.
 
-#--python virtual machine (pvm):
-code iteration (always running loop) 
-run time engine(always running , executes and cnvert into binary languge , communicate to computer)
-|
-also known as python interpreter
-ryme dal invented node.js compuer se bahar java ko run krske
+---
 
-#----tpu(Tensor processing unit)
-#----Cpu(Control processing unit)
-#----Gpu(Graphical processing unit)
+## Python Compilation Process
+- Python code is first converted into **bytecode** before execution.
+- Compiled Python files are stored as **`.pyc`** in the `__pycache__` folder.
+- Python's most popular variant is **CPython**.
 
-#----------Data Types of python
-string(str)->abc->textual value
-tuples(tuples)->collection of data ,  imputable
-integer(int)->numbers
-boolean(bool)->true or false (t and f capital)
-dictionary (dictionary)->object->key and value
-float(float)->decimals numbers
-list(list)->array (positive->left to right & negative ->right to left(-1 se start hote he) indexing)
-set (set)->unique value ->repeated number arahae like 1224555 ->remove the repeted number unique data
-frozen set (frozenset)->change nhi hita
-none(NoneType)
+### Why Does Python Generate `.pyc` Files?
+`.pyc` files are generated when importing a module to make execution **faster**.
 
-mutable -> chnge ho kste he
-imputable ->chnge nhi ho skte
+---
 
-interpreted dynamic language (python)
+## Execution Process in Python
+1. Python code is **compiled into bytecode** (not machine code).
+2. Bytecode is stored in a **cache**, making execution faster.
+3. The **Python Virtual Machine (PVM)** executes the bytecode.
+4. PVM runs in a loop and converts bytecode into **binary code** that the computer understands.
+5. The **Python interpreter** is also known as a **runtime engine**, as it continuously runs and processes code.
 
-naming convention:
-snake cases
-body define(tab button or four spaces bcz it will cause indentation error)
+---
 
-#--pep 8
+## Different Processing Units
+- **CPU (Central Processing Unit):** Executes general instructions.
+- **GPU (Graphics Processing Unit):** Handles graphical tasks and parallel processing.
+- **TPU (Tensor Processing Unit):** Specialized for machine learning tasks.
 
+---
+
+## Python Data Types
+| Data Type        | Description                                   | Example              |
+|-----------------|---------------------------------|--------------------|
+| **String (str)** | Text values | `"hello"` |
+| **Tuple (tuple)** | Collection of data, immutable | `(1, 2, 3)` |
+| **Integer (int)** | Whole numbers | `5`, `100` |
+| **Boolean (bool)** | True or False | `True`, `False` |
+| **Dictionary (dict)** | Key-value pairs (like JSON objects) | `{"key": "value"}` |
+| **Float (float)** | Decimal numbers | `3.14`, `2.5` |
+| **List (list)** | Ordered collection (can be changed) | `[1, 2, 3]` |
+| **Set (set)** | Unique values (removes duplicates) | `{1, 2, 3}` |
+| **Frozen Set (frozenset)** | Similar to set, but unchangeable | `frozenset({1, 2, 3})` |
+| **None (NoneType)** | Represents the absence of a value | `None` |
+
+---
+
+## Mutable vs Immutable Objects
+- **Mutable (can be changed):** Lists, dictionaries, sets.
+- **Immutable (cannot be changed):** Strings, tuples, frozensets.
+
+---
+
+## Python Naming Conventions
+- Python uses **snake_case** for variable and function names (e.g., `example_variable`).
+- **Indentation** is crucial (use **tabs** or **four spaces** to avoid errors).
+
+---
+
+## PEP 8
+PEP 8 is the **official Python style guide** that provides best practices for writing **clean** and **readable** code.
+
+---
+
+## Author
+📌 **Written by:** *Faria Mustaqim*
