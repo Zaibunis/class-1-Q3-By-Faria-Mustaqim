@@ -110,4 +110,4 @@ PEP 8 is the **official Python style guide** that provides best practices for wr
 ---
 
 ## Author
-📌 **Written by:** *Faria Mustaqim*
+📌 **By:** *Faria Mustaqim*
